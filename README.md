@@ -24,7 +24,8 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :posts
-- has_many :users_groups 
+- has_many :users_groups
+- has_many  :groups,  through:  :users_groups
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -34,6 +35,7 @@ Things you may want to cover:
 ### Association
 - has_many :posts
 - has_many :users_groups
+- has_many  :users,  through:  :users_groups
 
 ## users_groupsテーブル
 |Column|Type|Options|

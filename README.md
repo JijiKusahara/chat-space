@@ -18,10 +18,9 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :posts
 - has_many :users_groups
@@ -30,8 +29,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :posts
 - has_many :users_groups
@@ -51,6 +49,8 @@ Things you may want to cover:
 |------|----|-------|
 |text|text||
 |image|string||
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - behongs_to :group

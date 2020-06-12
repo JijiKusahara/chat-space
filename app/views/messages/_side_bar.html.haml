@@ -1,0 +1,25 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        masa
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__edit-user
+          = link_to "#", class: "side-header__box__menu__edit-user side-header__box__menu__edit-user--edit" do
+            = icon('far', 'edit', class: "side-header__box__menu__edit-user--edit")  
+        %li.side-header__box__menu__new-group
+          = link_to "#", class: "side-header__box__menu__new-group side-header__box__menu__new-group--cog" do
+            = icon('fas', 'cog', class: "side-header__box__menu__new-group--cog")
+
+  .side-body
+    .side-body__display
+      .side-body__display__group-name
+        hogehoge
+      .side-body__display__top-message
+        これはテストです
+    .side-body__display
+      .side-body__display__group-name
+        techcamp
+      .side-body__display__top-message
+        まだメッセージはありません
+        

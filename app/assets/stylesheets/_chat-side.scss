@@ -1,5 +1,5 @@
 .chat-side {
-  color: #ffffff;
+  color: $white-color;
   .side-header {
     height: 100px;
     width: 300px;
@@ -22,10 +22,10 @@
         display: flex;
         justify-content: end;
         &__edit-user {
-        color: #ffffff;
+        color: $white-color;
         }
         &__new-group {
-          color: #ffffff;
+          color: $white-color;
           margin-left: 3px;
         }
       }  

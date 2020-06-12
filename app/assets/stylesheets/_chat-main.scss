@@ -1,5 +1,3 @@
-$maim-width: calc(100vw - 300px);
-
 .Chat-main {
   width: $maim-width;
   .main-header {
@@ -33,10 +31,6 @@ $maim-width: calc(100vw - 300px);
       line-height: 40px;
       color: #38aef0;
       text-decoration: none;
-      // &__edit {
-      //   color: #38aef0;
-      //   text-decoration: none;
-      // }
     }
   }
   .main-body {

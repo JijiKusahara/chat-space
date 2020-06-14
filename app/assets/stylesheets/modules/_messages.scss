@@ -2,3 +2,24 @@
   box-sizing: border-box;
 }
 
+.MessageBox {
+  .MessageInfo{
+    display: flex;
+    &__userName {
+      font-size: 16px;
+      color: #333333;
+      font-weight: bold;
+    }
+    &__date {
+      font-size: 12px;
+      color: #999999;
+      margin-left: 10px
+    }
+  }
+  .Message {
+    margin-bottom: 46px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #434a54;
+  }
+}

@@ -1,36 +1,28 @@
-.Chat-main
+.chat-main
   .main-header
     .main-header__box-left
       .main-header__box-left__group-info
-        test
+        = @group.name
       %ul.main-header__box-left__members-info
         Member：
         %li.main-header__box-left__member
-          masa
-    = link_to 'Edit',"#", class: "main-header__box-edit"
+          - @group.users.each do |user|
+            = user.name
+          
+    = link_to 'Edit', edit_group_path(@group.id), class: "main-header__box-edit"
   .main-body
-    .main-body__user-info
-      .main-body__user-info__name
-        masa
-      .main-body__user-info__date
-        2019/11/20(Wed)17:43:01
-    .main-body__message
-      おはよう！
+    = render @messages
 
-    .main-body__user-info
-      .main-body__user-info__name
-        masa
-      .main-body__user-info__date
-        2019/11/20(Wed)17:43:34
-    .main-body__message
-      今日は夜から雨
+
 
   .main-footer
-    %form.form
-      .input-content
-        %input{type: "text", class: "input-content__text", placeholder: "typ a message"}
-        %label{class: "input-content__image"}
-          = icon('far', 'image')
-          %input{type: "file", class: "input-content__image__file"}
-      %input{type: "submit", value: "Send", class: "submit-btn"}
-     
+    .from
+      = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+        .input-content
+          = f.text_field :content, class: 'input-content__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-content__image' do
+            = icon('far', 'image', class: 'input-content__icon')
+            = f.file_field :image, class: 'input-content__image__file'
+        = f.submit 'Send', class: 'submit-btn'
+
+

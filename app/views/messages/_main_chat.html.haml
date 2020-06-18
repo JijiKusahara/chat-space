@@ -16,13 +16,12 @@
 
 
   .main-footer
-    .from
-      = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
-        .input-content
-          = f.text_field :content, class: 'input-content__text', placeholder: 'type a message'
-          = f.label :image, class: 'input-content__image' do
-            = icon('far', 'image', class: 'input-content__icon')
-            = f.file_field :image, class: 'input-content__image__file'
-        = f.submit 'Send', class: 'submit-btn'
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+      .input-content
+        = f.text_field :content, class: 'input-content__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-content__image' do
+          = icon('far', 'image', class: 'input-content__icon')
+          = f.file_field :image, class: 'input-content__image__file'
+      = f.submit 'Send', class: 'submit-btn'
 
 

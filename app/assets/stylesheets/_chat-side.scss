@@ -34,6 +34,7 @@
     }
   }
   .side-body {
+    overflow: scroll;
     width: 300px;
     height: calc(100vh - 100px);
     background-color: #2f3e51;
@@ -43,7 +44,6 @@
       a{
         color: #fff;
         text-decoration: none;
-
       }
       &__group-name {
         margin-bottom: 5px;
